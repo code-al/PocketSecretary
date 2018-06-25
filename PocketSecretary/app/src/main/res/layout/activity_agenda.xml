@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgendaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:orientation="vertical"
+        android:id="@+id/addAgendaLinearLayout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="16dp"
+            android:textSize="25dp"
+            android:lines="4"
+            android:minLines="4"
+            android:gravity="top|left"
+            android:scrollHorizontally="false"
+            android:inputType="textCapWords|textMultiLine"
+            android:hint="Agenda"
+            android:id="@+id/agendaName"/>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addAgendaLinearLayout"
+            android:orientation="vertical"
+            android:id="@+id/addAgendaLinearLayout2">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="8dp"
+                android:textSize="15dp"
+                android:gravity="center_vertical"
+                android:text="Details"
+                android:id="@+id/details"/>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:clickable="true"
+                android:onClick="setDate"
+                android:id="@+id/date">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/dateIcon"
+                    android:src="@drawable/calendar"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dateIcon"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textSize="15dp"
+                        android:id="@+id/dateText"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:id="@+id/setDate"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:clickable="true"
+                android:onClick="setTime"
+                android:id="@+id/time">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/timeIcon"
+                    android:src="@drawable/time"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/timeIcon"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textSize="15dp"
+                        android:id="@+id/timeText"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:id="@+id/setTime"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:clickable="true"
+                android:onClick="setLocation"
+                android:id="@+id/location">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/locationIcon"
+                    android:src="@drawable/location"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/locationIcon"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:textSize="15dp"
+                        android:id="@+id/locationText"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:id="@+id/setlocation"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="2dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="DELETE AGENDA"
+        android:textSize="15dp"
+        android:id="@+id/dltAgendaBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:text="ADD AGENDA"
+        android:textSize="15dp"
+        android:id="@+id/addAgendaBtn"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

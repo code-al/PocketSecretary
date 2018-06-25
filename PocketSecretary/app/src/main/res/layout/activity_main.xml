@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:text="Hi, here are your agenda:"
+        android:textSize="17sp"
+        android:id="@+id/welcomeText"/>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_above="@+id/buttonLayout"
+        android:id="@+id/list"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/welcomeText"
+        android:id="@+id/scrollView">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/relativeView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            android:gravity="center"
+            android:id="@+id/emptyText"
+            android:text="No Agenda For Today"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonLayout">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/GoToAlarm"
+        android:text="Set Alarm"
+        android:textSize="15dp"
+        android:layout_above="@id/GoToAgendas" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/GoToAgendas"
+        android:text="Add an Agenda"
+        android:textSize="15dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.edu.ncku.iim.h34035041.pocketsecretary">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/pocket_secretary"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/pocket_secretary_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AlarmActivity"
+            android:noHistory="true"/>
+        <activity android:name=".AgendaActivity" />
+
+        <receiver android:name=".AlarmReceiver" />
+
+        <service
+            android:name=".RingtoneService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".AlarmControl"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_alarm_control"
+            android:theme="@style/FullscreenTheme"
+            android:noHistory="true">
+        </activity>
+
+        <provider
+            android:authorities="tw.edu.ncku.iim.h34035041.pocketsecretary"
+            android:name=".AlarmReminderProvider"
+            android:exported="false" />
+        <service android:name=".ReminderAlarmService"
+            android:exported="false" />
+    </application>
+
+</manifest>
